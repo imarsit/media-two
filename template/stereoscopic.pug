@@ -1,0 +1,82 @@
+extends layout
+
+block vars
+    - let title = '火星人科技'
+
+block content
+    .container
+        include lib/head
+        #content
+            // 3列无缝
+            // 画廊一 扩展版开始
+            #slider-4.slider-4.col-3
+                ul#slider-list.slider-list
+                ul#temp.temp.hide
+                    li.slider-item
+                        .inner
+                            a.fancybox(rel='group', href='/public/images/stereoscopic/dm2.jpg' title='<p>DMX·锐高音响</p>')
+                                .thumb
+                                    img(src='/public/images/stereoscopic/dm2-691e384a1f72ab200e31eaf680e63d23.jpg')
+                                .info
+                                    p DMX·锐高音响
+                                span.mask(href='javascript:;')
+                    li.slider-item
+                        .inner
+                            a.fancybox(rel='group', href='/public/images/stereoscopic/dm3.jpg' title='<p>DMX·锐高音响</p>')
+                                .thumb
+                                    img(src='/public/images/stereoscopic/dm3-48a6674c15af35406908609f2dcc6c22.jpg')
+                                .info
+                                    p DMX·锐高音响
+                                span.mask(href='javascript:;')
+                    li.slider-item
+                        .inner
+                            a.fancybox(rel='group', href='/public/images/stereoscopic/dmx1.jpg' title='<p>DMX·锐高音响</p>')
+                                .thumb
+                                    img(src='/public/images/stereoscopic/dmx1-b5f8745f285511b7b9cffa50a3e66956.jpg')
+                                .info
+                                    p DMX·锐高音响
+                                span.mask(href='javascript:;')
+                    li.slider-item
+                        .inner
+                            a.fancybox(rel='group', href='/public/images/stereoscopic/dmx4.jpg' title='')
+                                .thumb
+                                    img(src='/public/images/stereoscopic/dmx4-29e7b05b5e254bcc9aa32b5bbd807cfb.jpg')
+                                .info
+                                span.mask(href='javascript:;')
+                    li.slider-item
+                        .inner
+                            a.fancybox(rel='group', href='/public/images/stereoscopic/dmx5.jpg' title='')
+                                .thumb
+                                    img(src='/public/images/stereoscopic/dmx5-3054cdce3ef6b05b05a0c30c63e7424a.jpg' alt='')
+                                .info
+                                span.mask(href='javascript:;')
+                    li.slider-item
+                        .inner
+                            a.fancybox(rel='group', href='/public/images/stereoscopic/rj00206c1.jpg' title='<p>ROJAZZ·锐驾音响</p>')
+                                .thumb
+                                    img(src='/public/images/stereoscopic/rj00206c1-be0005f1375af9147c7d038b4a5f4d0c.jpg')
+                                .info
+                                    p ROJAZZ·锐驾音响
+                                span.mask(href='javascript:;')
+                    li.slider-item
+                        .inner
+                            a.fancybox(rel='group', href='/public/images/stereoscopic/rj00206c2.jpg' title='<p>ROJAZZ·锐驾音响</p>')
+                                .thumb
+                                    img(src='/public/images/stereoscopic/rj00206c2-19a63d229b55d7380604da0db22eb639.jpg')
+                                .info
+                                    p ROJAZZ·锐驾音响
+                                span.mask(href='javascript:;')
+                    li.slider-item
+                        .inner
+                            a.fancybox(rel='group', href='/public/images/stereoscopic/zz.jpg' title='<p>三维空间设计</p>')
+                                .thumb
+                                    img(src='/public/images/stereoscopic/zz-7ecb32358bcc5ed320fdee12f1d69719.jpg')
+                                .info
+                                    p 三维空间设计
+                                span.mask(href='javascript:;')
+
+
+
+block script
+    script.
+

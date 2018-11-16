@@ -1,0 +1,145 @@
+extends layout
+
+block vars
+    - let title = '火星人科技'
+block content
+    .container
+        include lib/head
+        #content
+            .content-inner(style='background-image: url(/public/images/news/news1.jpg)')
+                // 新闻列表开始
+                .block.block-news
+                    .news-item
+                        .news-thumb(style='background-image: url(/public/images/news/news1.jpg)')
+                            a.mask(href='news_show')
+                        .news-time
+                            span.year 2015
+                            span.date 10月29日
+                        h3.title
+                            a(href='news_show') GENTAIOSN 泽田森摄影作品欣赏｜我要夏天
+                        span.desc
+                            | HELLO,别再宅在家里了，快来一起过个超IN夏天草地PARTY。我要夏天，尽情释放，夏天草地PARTY来了。
+                            | **PHOTOGRAPHER:@MIRS(GENTAIOSN STUDIO)**
+                            | **MAKEUP:@FANNY:@FANNY**
+                            | …
+                        p
+                            a.more(href='news_show') 继续阅读 >
+                    .news-item
+                        .news-thumb(style='background-image: url(/public/images/news/news1.jpg)')
+                            a.mask(href='news_show')
+                        .news-time
+                            span.year 2015
+                            span.date 09月05日
+                        h3.title
+                            a(href='news_show')
+                                | GENTAIOSN
+                                | 泽田森摄影作品欣赏｜AIMI时尚新娘造型与GENTAIOSN泽田森摄影合作妆面拍摄
+                        span.desc
+                            img(src='/public/images/news/news2.jpg')
+                            | **合作机构介绍：**
+                            | AIMI时尚新娘造型是一个全部由90后化妆师组…
+                        p
+                            a.more(href='news_show')
+                                | 继续阅读
+                                | >
+                    .news-item
+                        .news-thumb(style='background-image: url(/public/images/news/news1.jpg)')
+                            a.mask(href='news_show')
+                        .news-time
+                            span.year 2015
+                            span.date 04月15日
+                        h3.title
+                            a(href='news_show') GENTAIOSN泽田森--影棚出租
+                        span.desc
+                            | **影棚详情：**
+                            | 拥有400平方的独立实景摄影棚以及纯色摄影棚出租，摄影设备齐全，内设化妆室、办公室、休息处。
+                            | 地址:广州市海珠区南洲街道南大干围海珠创意产业园11栋东梯388
+                            | **影棚租赁说明:**
+                            | 1.摄影棚150元/小时。
+                            | …
+                        p
+                            a.more(href='news_show') 继续阅读 >
+                    .news-item
+                        .news-thumb(style='background-image: url(/public/images/news/news1.jpg)')
+                            a.mask(href='news_show')
+                        .news-time
+                            span.year 2015
+                            span.date 03月30日
+                        h3.title
+                            a(href='news_show') GENTAIOSN泽田森最新招聘信息
+                        span.desc
+                            | **设计师（2名）**
+                            | **-职位描述：**
+                            | 1、配合资深设计师/设计师工作；2、协助提案文件等各项准备工作； 3、项目的前期调研资料搜集工作；4、协助设计师完成后期制作印刷工作；5、完成上级交办的其他工作； 6、根据客户反馈的意见对设…
+                        p
+                            a.more(href='news_show') 继续阅读 >
+                    .news-item
+                        .news-thumb(style='background-image: url(/public/images/news/news1.jpg)')
+                            a.mask(href='news_show')
+                        .news-time
+                            span.year 2015
+                            span.date 01月01日
+                        h3.title
+                            a(href='news_show')
+                                | 2015最新一月大片
+                                shutter(island='')
+                        span.desc
+                            | 《SHUTTER ISLAND》
+                            | Photographer:@AdamChan
+                            | /Makeup: @JC/Stylist:@Con He
+                            | /Model:@Tamas G. & Fillipe L.(Model Management)
+                            | /Clo…
+                        p
+                            a.more(href='news_show') 继续阅读 >
+                    .news-item
+                        .news-thumb(style='background-image: url(/public/images/news/news1.jpg)')
+                            a.mask(href='news_show')
+                        .news-time
+                            span.year 2014
+                            span.date 11月14日
+                        h3.title
+                            a(href='news_show') 青年摄影师AdamChan作品赏析
+                        span.desc
+                            | AdamChan是广州今年涌现出来较具个性的商业摄影师，也是思嘉品牌设计公司核心摄影师之一，其作品辨识度高，有强烈的个人风格
+                            img.more(src='')
+                            | 继续阅读 >
+                            p
+                    .news-item
+                        .news-thumb(style='background-image: url(/public/images/news/news1.jpg)')
+                            a.mask(href='news_show')
+                        .news-time
+                            span.year 2015
+                            span.date 02月25日
+                        h3.title
+                            a(href='news_show') Gentasion将联合A.S-S-STUDIO在广州地区开设高级修图班
+                        span.desc
+                            | **一线修图师空降广州！
+                            | Gentasion年后将联合A.S-S-STUDIO开设专业修图班！
+                            | **
+                            | PS爱好者，摄影师，化妆师，数码师，想涉足婚纱样片开发，或希望从
+                            | 影楼转商业广告修图领域的人。欢迎大家踊跃报名参与！
+                            | 开设班级：
+                            | …
+                        p
+                            a.more(href='news_show') 继续阅读 >
+                    .news-item
+                        .news-thumb(style='background-image: url(/public/images/news/news1.jpg)')
+                            a.mask(href='news_show')
+                        .news-time
+                            span.year 2015
+                            span.date 02月12日
+                        h3.title
+                            a(href='news_show') 2015年大片《Evil Creation》青年摄影师MAX
+                        span.desc
+                            | 《Evil Creation》 Photographer:MAX（UnrealStudio） Makeup:@EdisonZhang（FameStudio） Model:@Katya K（ModelManagement）
+                            img.more(src='')
+                            | 继续阅读 >
+                            p
+                    .page.clearfix
+                        a.active(href='news') 1
+
+
+block script
+    script.
+
+

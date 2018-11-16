@@ -1,0 +1,116 @@
+extends layout
+
+block vars
+    - let title = '火星人科技'
+
+block content
+    .container
+        include lib/head
+        #content
+            input#point(style='display:none', value='113.299515,23.064282')
+            .content-inner(style='background-image: url(/public/images/contact/contact1.jpg)')
+                // 关于我们开始
+                .block.block-contact
+                    #contact-map.contact-map(style='height:300px;')
+                    div
+                        img(style='width:100%', src='/public/images/contact/iwmg-0345-version-2.png')
+                    .contact-content
+                        h5.contact-title 联系我们
+                        .editor-format
+                            p
+                                strong GENTASION·广州泽田森广告有限公司
+                            p
+                                | ￣￣￣￣
+                                br
+                                | 地址：广东省 广州市 海珠区 南洲街道 大干围 海珠创意产业园11栋 东梯388号
+                                br
+                                | 邮箱：273622400@qq.com
+                                br
+                                | 邮编：51000
+                            img(src='/public/images/contact/43t.jpg')
+                        h5.contact-title 给我们留言
+                        form#myform.clearfix(role='form', method='post')
+                            .left
+                                .form-group
+                                    label(for='name')
+                                        | 您的名字 
+                                        span(style='color:red') *
+                                    input#name.form-control(name='name', type='text', required='')
+                                .form-group
+                                    label(for='email')
+                                        | Email 
+                                        span(style='color:red') *
+                                    input#email.form-control(name='email', type='text', required='')
+                                .form-group
+                                    label(for='tel') 联系电话
+                                    input#phone.form-control(name='phone', type='text')
+                            .form-group.right
+                                label(for='text')
+                                    | 内容 
+                                    span(style='color:red') *
+                                textarea#message.form-control(name='message', type='text', required='')
+                            .form-bottom
+                                button#sendbtn.btn.btn-submit(type='submit') 提交
+                                button#sendingbtn.btn.btn-submit(style='display:none;', disabled='') 发送中...
+
+
+block script
+    script.
+            if($("#point").val().length>0){
+                var map = new BMap.Map("contact-map");
+                var xpoints = $("#point").val().split(',');
+                var point = new BMap.Point(xpoints[0], xpoints[1]);
+                map.centerAndZoom(point, 15);
+                map.setMapStyle({style:'grayscale'});
+                var marker = new BMap.Marker(point);
+                map.addOverlay(marker);
+                marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+            }
+            
+
+
+            $('#sendingbtn').hide();
+            $(document).ready(function() { 
+                var options = { 
+                    beforeSubmit:  before,
+                    success:       success, 
+                    error: _error,
+
+                    url:       document.URL+"/status:go",
+                    type:      "post",
+                    resetForm: false
+                }; 
+                $('#myform').ajaxForm(options); 
+            });
+            function _error(xhr, status, error){
+                alert('发送失败，请稍后再试。')
+            }
+            function before(formData, jqForm, options){
+                if(!/^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/.test($('#email').val())){
+                    alert("请输入正确邮箱");
+                    return false;
+                }
+                if($("#name").val().length<1){
+                    alert("请输入名字");
+                    return false;
+                }
+                if($("#message").val().length<1){
+                    alert("请输内容");
+                    return false;
+                }
+            $('#sendbtn').hide();
+            $('#sendingbtn').show();
+            return true;
+            }
+            function success(responseText, statusText, xhr, $form){
+                var result = JSON.parse(responseText);
+                if(result.response=='success'){
+                    $('#sendbtn').show();
+                    $('#sendingbtn').hide();
+                    alert('发送成功，我们将很快与您联系。')
+                }else{
+                        $('#sendbtn').show();
+                    $('#sendingbtn').hide();
+                    alert('发送失败，请稍后再试。')
+                }
+            }

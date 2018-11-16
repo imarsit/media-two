@@ -1,0 +1,57 @@
+
+#header
+    .navbar-header.clearfix
+        a.navbar-brand(href='/')
+            img(src='/public/images/head/logo.png')
+    button#navbar-toggle.navbar-toggle toggle
+    .navbar-collapse(style='background: #000')
+        ul.navbar-nav
+            li.main.active
+                .title
+                    a.en(href='/') 欢迎
+                    a.cn(href='/') 欢迎
+            li.main
+                .title
+                    a.en(href='vision') 业务分类
+                    a.cn(href='vision') 业务分类
+                ul.sub
+                    li
+                        a(href='plane') 平面设计作品
+                    li
+                        a(href='stereoscopic') 三维空间设计
+            li.main
+                .title
+                    a.en(href='movie') 影视广告
+                    a.cn(href='movie') 影视广告
+            li.main
+                .title
+                    a.en(href='news') 最新事件
+                    a.cn(href='news') 最新事件
+            li.main
+                .title
+                    a.en(href='contact') 联系我们
+                    a.cn(href='contact') 联系我们
+            li.main
+                .title
+                    a.en(href='about') 关于我们
+                    a.cn(href='about') 关于我们
+            li.main
+                .title
+                    a.en(href="javascript:;") 博客
+                    a.cn(href="javascript:;") 博客
+        .navbar-bottom
+            .qr-code
+            .follow
+                a(href="javascript:;")
+                    img(src='/public/images/head/follow-sina.png')
+                a(href="javascript:;")
+                    img(src='/public/images/head/follow-qq.png')
+            .copyright
+                p(style='color:#fff')
+                p
+                    | © 2018
+                    a(href='/') 火星人信息科技有限公司
+                    br
+                    | 备案号 桂ICP备15003644号-2
+                p
+

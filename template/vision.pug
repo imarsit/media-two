@@ -1,0 +1,34 @@
+extends layout
+
+block vars
+    - let title = '火星人科技'
+
+block content
+    .container
+        include lib/head
+        #content
+            #slider-3.slider-3
+                ul.slider-list
+                    li.slider-item
+                        .thumb(style='background-image: url(/public/images/vision/bg5.jpg)')
+                        .info
+                            h2 平面设计作品
+                            p
+                                font(size='2', style='line-height:4;') GENTASION·泽田森视觉
+                        a.mask(href='plane')
+                    li.slider-item
+                        .thumb(style='background-image: url(/public/images/vision/bg5.jpg)')
+                        .info
+                            h2 三维空间设计
+                            p
+                                font(size='2', style='line-height:4;') GENTASION·泽田森视觉
+                        a.mask(href='stereoscopic')
+                ul.slider-nav
+                    li.slider-nav-item.prev
+                        span.arrow
+                    li.slider-nav-item.next
+                        span.arrow
+
+
+block script
+    script.
